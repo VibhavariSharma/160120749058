@@ -69,7 +69,7 @@ app.get("/train/trains", async (req, res) => {
 function processTrainData(rawData) {
   const currentTime = new Date();
   const twelveHoursLater = new Date();
-  twelveHoursLater.setHours(currentTime.getHours() + 12);--1
+  twelveHoursLater.setHours(currentTime.getHours() + 12);
 
   const filteredTrains = rawData.filter((train) => {
     const departureTime = new Date(train.departureTime);
